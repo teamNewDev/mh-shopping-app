@@ -4,11 +4,10 @@
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: hsl(235, 21%, 11%);
 }
 
 nav {
-  background: #00805a;
   height: 3rem;
   line-height: 3rem;
   color: white;
@@ -16,8 +15,17 @@ nav {
   margin-bottom: 1rem;
 }
 
+#background {
+  background: url('./assets/bg-dark.jpg') ;
+  height: 15rem;
+  margin-top: -1rem;
+}
 .container {
   padding: 1rem;
+}
+
+#itemForm {
+  transform: translateY(-15rem);
 }
 
 #itemForm label {
@@ -29,6 +37,9 @@ nav {
   height: 2rem;
   text-align: center;
   border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  color: #fff;
+  background: hsl(235, 24%, 19%);
 }
 
 #quantityInput, #priceInput {
@@ -37,20 +48,21 @@ nav {
 
 #addItemButton {
   border: unset;
-  background: #00805a;
-  color: #fff;
+  background: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
   padding: 0.5rem;
 }
 
 #itemsDiv {
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: -14rem;
+  transform: translateY(-15rem);
 }
 
 .item {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  background: #eaeaea;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  background: hsl(235, 24%, 19%);
   margin-bottom: 0.5rem;
 }
 
@@ -59,15 +71,22 @@ nav {
   width: 2.5rem;
 }
 
+.editItemButton, .updateItemButton {
+  text-align: center;
+  margin-left: 0.2rem;
+  background: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+}
+
 .itemInfo {
   text-align: center;
+  color: hsl(234, 11%, 52%);
 }
 
 .deleteButton {
   margin: 0 0 0 auto;
-  border: unset;
-  background: #b10000;
-  color: #fff;
+  background: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
   font-size: 0.8rem;
   width: 2.5rem;
   height: 100%;
@@ -78,7 +97,7 @@ nav {
 }
 
 .purchased {
-  background: #00805a;
+  background: hsl(235, 24%, 19%);
   color: #fff;
 }
 
@@ -87,8 +106,9 @@ nav {
 }
 
 #clearItemsButton {
+  margin-top: 0.5rem;
   border: unset;
-  background: #00805a;
-  color: #fff;
+  background: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
   padding: 0.5rem;
 }
