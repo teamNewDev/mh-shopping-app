@@ -7,6 +7,39 @@
 
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./assets/icon-192.png">
+    <link rel="manifest" href="./manifest.json">
+    
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/ab-shopping-app/sw.js')
+  });
+}
+
+        var elem = document.body;
+      function requestFullScreen(element) {
+        // Supports most browsers and their versions.
+        var requestMethod =
+          element.requestFullScreen ||
+          element.webkitRequestFullScreen ||
+          element.mozRequestFullScreen ||
+          element.msRequestFullScreen;
+
+        if (requestMethod) {
+          // Native full screen.
+          requestMethod.call(element);
+        } else if (typeof window.ActiveXObject !== "undefined") {
+          // Older IE.
+          var wscript = new ActiveXObject("WScript.Shell");
+          if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+          }
+        }
+      }
+
+      
+      requestFullScreen(elem);
+    </script>
 
     <script src="./dexie.min.js"></script>
   </head>
@@ -15,6 +48,8 @@
     <nav>
       <p>My list</p>
     </nav>
+    
+    <div id="background"></div>
 
     <div class="container">
       <form id="itemForm">
@@ -34,6 +69,7 @@
         </label>
 
         <button type="submit" id="addItemButton">Add item</button>
+        
       </form>
 
       <div id="itemsDiv"></div>
